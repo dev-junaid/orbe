@@ -1,0 +1,35 @@
+#login{
+  background-color: #ffffff;
+  height: 100vh;
+}
+.text-info{
+  color: #000000 !important;
+}
+#login .container #login-row #login-column #login-box {
+  margin: 10px auto;
+  //max-width: 460px;
+  border: 1px solid transparent;
+  background-color: #F5D6D2;
+  padding: 40px;
+  color: #000000 !important;
+  border-radius: 10px;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+.btn-info, .btn-info:hover{
+  background-color: #EDAEA5 !important;
+  border-color: #EDAEA5 !important;
+  width: 100%;
+  margin: 10px 0;
+}
+#register-link a{
+  color: #EDAEA5 !important;
+  font-weight: bold;
+}
+.login-logo{
+  margin-top: 70px;
+}

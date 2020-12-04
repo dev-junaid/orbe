@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Orbe</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&subset=cyrillic" rel="stylesheet">
+    <script async  src="https://cdn.ampproject.org/v0.js"></script>
+    <% if controller.controller_name === 'sessions' || controller.controller_name === "registrations" %>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+      <% end %>
+  </head>
+
+  <body>
+
+    <%= yield %>
+  </body>
+  <script>
+      $(document).ready(function() {
+          $("#main-content").hide();
+          var counter = 0;
+          var c = 0;
+          var logo = ['o', 'r', 'b', 'e', 'o', 'r', 'b', 'e', 'o', 'r', 'b', 'e', 'o', 'r', 'b', 'e', 'o', 'r', 'b', 'e', 'o', 'r', 'b', 'e', 'orbe']
+          var i = setInterval(function() {
+
+              $(".loading-page .counter h1").html(logo[c]);
+              $(".loading-page").css("width", (c * 3) + "%");
+
+              counter++;
+              c++;
+              if(counter == 30) {
+                  clearInterval(i);
+                  $('.loading-page').hide();
+                  $("#main-content").show();
+              }
+          }, 80);
+      });
+      $(".hover").mouseleave(
+          function() {
+              $(this).removeClass("hover");
+          }
+      );
+  </script>
+</html>
